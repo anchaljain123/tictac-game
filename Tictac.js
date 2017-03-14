@@ -18,7 +18,7 @@ $(document).ready(function () {
         {
             $("#"+id).attr('value','X');
             turn = 0;
-            $('span').html(" Player2, Its your chance !! ");
+            $('span').html(" Player2, Its your chance !!!!!! ");
             checkWin('X');
 
         }
