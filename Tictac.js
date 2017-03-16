@@ -174,6 +174,7 @@ $(document).ready(function () {
     $('#b2').on("click",function() {
 
         $('input').attr({'value':'','disabled':false});
+        $('span').html("");
         turn=1;
         count_square=0;
  		
