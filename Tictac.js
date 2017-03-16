@@ -47,7 +47,7 @@ $(document).ready(function () {
         var sqr9=document.getElementById('s9').value;
 
          res=val;
-
+         flag_check=0;
         var player;
         if(res=="X")
         {
@@ -64,80 +64,63 @@ $(document).ready(function () {
 
             $('span').html(player);
             $("input").attr('disabled',true);
-            (res=="X")? (win1++) : (win2++);
-            $('#p1score').html(win1);
-       	   $('#p2score').html(win2);
-
+            flag_check=1;
         }
 
         else if (sqr4 == res && sqr5 == res && sqr6 ==res) { //2nd row
 
             $('span').html(player);
             $("input").attr('disabled',true);
-            (res=="X")? (win1++) : (win2++);
-            $('#p1score').html(win1);
-       	   $('#p2score').html(win2);
+            flag_check=1;
 
         }
         else if (sqr7 == res && sqr8 == res && sqr9 == res) { //3rd row
             $('span').html(player);
             $("input").attr('disabled',true);
-            (res=="X")? (win1++) : (win2++);
-            $('#p1score').html(win1);
-       	   $('#p2score').html(win2);
+            flag_check=1;
 
         }
         else if (sqr1 == res && sqr4 == res && sqr7 == res) { //1st col
             $('span').html(player);
             $("input").attr('disabled',true);
-            (res=="X")? (win1++) : (win2++);
-            $('#p1score').html(win1);
-       	   $('#p2score').html(win2);
+            flag_check=1;
 
         }
 
         else if (sqr2 == res && sqr5 == res && sqr8 == res) { //2nd col
             $('span').html(player);
             $("input").attr('disabled',true);
-            (res=="X")? (win1++) : (win2++);
-            $('#p1score').html(win1);
-       	   $('#p2score').html(win2);
+            flag_check=1;
 
         }
         else if (sqr3 == res && sqr6 == res && sqr9 == res) { //3rd col
             $('span').html(player);
             $("input").attr('disabled',true);
-            (res=="X")? (win1++) : (win2++);
-            $('#p1score').html(win1);
-       	   $('#p2score').html(win2);
+            flag_check=1;
 
         }
 
         else  if (sqr1 == res && sqr5 == res && sqr9 == res) { //1st diag
             $('span').html(player);
             $("input").attr('disabled',true);
-            (res=="X")? (win1++) : (win2++);
-            $('#p1score').html(win1);
-       	   $('#p2score').html(win2);
+            flag_check=1;
 
         }
         else if (sqr3 == res && sqr5 ==res && sqr7 == res) { //2nd diag
             $('span').html(player);
             $("input").attr('disabled',true);
-            (res=="X")? (win1++) : (win2++); 
-            $('#p1score').html(win1);
-       	   $('#p2score').html(win2);           
+            flag_check=1;      
 
         }
-
-
-
         else {
             drawGame();
-
-
         }
-
+        
+        if(flag_check==1){
+        	(res=="X")? (win1++) : (win2++);
+            $('#p1score').html(win1);
+       	   $('#p2score').html(win2);
+        }
 
 
     }
