@@ -64,7 +64,9 @@ $(document).ready(function () {
 
             $('span').html(player);
             $("input").attr('disabled',true);
-
+            (res=="X")? (win1++) : (win2++);
+            $('#p1score').html(win1);
+       	   $('#p2score').html(win2);
 
         }
 
@@ -72,46 +74,59 @@ $(document).ready(function () {
 
             $('span').html(player);
             $("input").attr('disabled',true);
+            (res=="X")? (win1++) : (win2++);
+            $('#p1score').html(win1);
+       	   $('#p2score').html(win2);
 
         }
         else if (sqr7 == res && sqr8 == res && sqr9 == res) { //3rd row
             $('span').html(player);
             $("input").attr('disabled',true);
-
+            (res=="X")? (win1++) : (win2++);
+            $('#p1score').html(win1);
+       	   $('#p2score').html(win2);
 
         }
         else if (sqr1 == res && sqr4 == res && sqr7 == res) { //1st col
             $('span').html(player);
             $("input").attr('disabled',true);
-
+            (res=="X")? (win1++) : (win2++);
+            $('#p1score').html(win1);
+       	   $('#p2score').html(win2);
 
         }
 
         else if (sqr2 == res && sqr5 == res && sqr8 == res) { //2nd col
             $('span').html(player);
             $("input").attr('disabled',true);
-
-
+            (res=="X")? (win1++) : (win2++);
+            $('#p1score').html(win1);
+       	   $('#p2score').html(win2);
 
         }
         else if (sqr3 == res && sqr6 == res && sqr9 == res) { //3rd col
             $('span').html(player);
             $("input").attr('disabled',true);
-
+            (res=="X")? (win1++) : (win2++);
+            $('#p1score').html(win1);
+       	   $('#p2score').html(win2);
 
         }
 
         else  if (sqr1 == res && sqr5 == res && sqr9 == res) { //1st diag
             $('span').html(player);
             $("input").attr('disabled',true);
-
+            (res=="X")? (win1++) : (win2++);
+            $('#p1score').html(win1);
+       	   $('#p2score').html(win2);
 
         }
         else if (sqr3 == res && sqr5 ==res && sqr7 == res) { //2nd diag
             $('span').html(player);
             $("input").attr('disabled',true);
-
-
+            (res=="X")? (win1++) : (win2++); 
+            $('#p1score').html(win1);
+       	   $('#p2score').html(win2);           
 
         }
 
@@ -127,7 +142,7 @@ $(document).ready(function () {
 
     }
 
-    $('#b1').on("click",function() {
+    /*$('#b1').on("click",function() {
 
         if(res=="X")
         {
@@ -144,7 +159,7 @@ $(document).ready(function () {
         $('#divid').append("  score of player2   :"+win2);
 
 
-    });
+    });*/
 
     function drawGame() {
 
@@ -158,13 +173,15 @@ $(document).ready(function () {
 
     $('#b2').on("click",function() {
 
-
-        //  $('input').attr('value','');
+        $('input').attr({'value':'','disabled':false});
         turn=1;
         count_square=0;
+ 		
 
 
-        window.location.reload();
+
+
+        //window.location.reload();
 
         // $('#s1,#s2,#s3,#s4,#s5,#s6,#s7,#s8,#s9').empty();
 
